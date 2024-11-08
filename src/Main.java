@@ -31,17 +31,32 @@ public class Main {
 //        dim.retired();
 //        System.out.println("Pension is" + dim.collectPay());
 //
-        var computerCase = new ComputerCase("2208", "Dell", "240");
-        var montitor = new Montitor("27 inch Beast", "Acer", 27, "2540 x 1440");
-        var motherBoard = new Motherboard("Bg-200", "Asus", 4, 6, "v2.045");
+//        var computerCase = new ComputerCase("2208", "Dell", "240");
+//        var montitor = new Montitor("27 inch Beast", "Acer", 27, "2540 x 1440");
+//        var motherBoard = new Motherboard("Bg-200", "Asus", 4, 6, "v2.045");
+//
+//        var thePc = new PersonalComputer("2205","Dell",computerCase,montitor,motherBoard);
+//
+////        thePc.getMonitor().drawPixelAt(1,2,"red");
+////        thePc.getMotherboard().loadProgram("Netflix");
+////        thePc.getComputerCase().pressPowerButton();
+//
+//        thePc.powerUp();
+//
+        var newKitchen = new SmartKitchen();
 
-        var thePc = new PersonalComputer("2205","Dell",computerCase,montitor,motherBoard);
 
-//        thePc.getMonitor().drawPixelAt(1,2,"red");
-//        thePc.getMotherboard().loadProgram("Netflix");
-//        thePc.getComputerCase().pressPowerButton();
+//        newKitchen.getBrewMaster().setHasWorkToD(true);
+//        newKitchen.getBrewMaster().brewCofee();
+//        newKitchen.getDishwasher().setHasWorkToDo(true);
+//        newKitchen.getDishwasher().doDishes();
+//        newKitchen.getIceBox().setHasWorkToDo(true);
+//        newKitchen.getIceBox().orderFood();
 
-        thePc.powerUp();
+        newKitchen.setKitchenState(true,true,false);
+        newKitchen.doKitchenWork();
+
+
     }
 
     public static void doAnimalStuff(Animal animal, String speed) {
