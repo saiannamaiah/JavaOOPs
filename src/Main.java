@@ -1,3 +1,7 @@
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.Random;
+
 public class Main {
     public static void main(String[] args) {
 //
@@ -53,8 +57,36 @@ public class Main {
 //        newKitchen.getIceBox().setHasWorkToDo(true);
 //        newKitchen.getIceBox().orderFood();
 
-        newKitchen.setKitchenState(true,true,false);
-        newKitchen.doKitchenWork();
+//        newKitchen.setKitchenState(true,true,false);
+//        newKitchen.doKitchenWork();
+
+//        var printer = new Printer(50,false);
+//        System.out.println("Initial Page Count = "+ printer.getPagesPrinted());
+//
+//        int printPages = printer.printPages(10);
+//        System.out.println("Pages Print = "+         printPages);
+//        System.out.println("Total Page Count = "+ printer.getPagesPrinted());
+//        printPages = printer.printPages(20);
+//        System.out.println("Pages Print = "+         printPages);
+//        System.out.println("Total Page Count = "+ printer.getPagesPrinted());
+//
+//        int[] myIntArray = new int[10];
+//        myIntArray[5] = 69;
+//
+//        double[] myDoubleArray = new double[20];
+//        myDoubleArray[2] = 6.9;
+
+//        int[] myArrayIntitilaizer = new int[]{1,2,3,4,5,6,8,9};
+//        int[] myIntilizerSeconfType = {1,2,3,4,5,6,7,8,9,};
+//
+//        System.out.println(myIntArray[5]);
+
+
+
+    int[] unsortedArray = getRandomInteger(5);
+        System.out.println(Arrays.toString(unsortedArray));
+
+
 
 
     }
@@ -65,5 +97,38 @@ public class Main {
         System.out.println(animal);
     }
 
+    public static int[] getRandomInteger(int len){
+        Random random = new Random();
+
+        int[] randomArray = new int[len];
+
+        for (int i =0; i < len; i++){
+            randomArray[i] = random.nextInt(1000);
+        }
+        return randomArray;
+    }
+
+    public static int[] sortIntegers(int[] array){
+        int[] sortedArrays = Arrays.copyOf(array,array.length);
+
+        boolean flag = true;
+        int temp;
+
+        while(flag) {
+            flag = false;
+
+            for(int i = 0; i < sortedArrays.length; i++) {
+                if (sortedArrays[i] < sortedArrays[i + 1]) {
+                    temp = sortedArrays[i];
+                    sortedArrays[i] = sortedArrays[i + 1];
+                    sortedArrays[i + 1] = temp;
+                    flag = true;
+                }
+            }
+        }
+
+        return sortedArrays;
+
+    }
 
 }
